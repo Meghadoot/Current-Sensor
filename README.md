@@ -18,7 +18,7 @@ This is a library for the Current sensor (driver) designed specifically to work 
 
 ## Summary
 
-Current driver uses the current sensor (simple voltage divider) to measure the voltage of battery or cell(0V to 20V). Internal ADC is used to calculate the exact value of analog voltage from raw measured reading.
+Current driver uses the current sensor (simple voltage divider) to measure the current drawn from battery or cell(0V to 10Amps). Internal ADC is used to calculate the exact value of analog current from raw measured reading.
 
 
 ## Installation
@@ -34,21 +34,18 @@ To use this library download the zip file or clone the repository, decompress it
   ```
    *  Analog_pin: Any Analog Pin on Arduino Board
    
-   *  gain: Current measurement chip gain  
-   
-   *  Configuration: sensor connection to analog pin of arduino [PULL_UP or PULL_DOWN]  
+   *  gain: Current measurement IC gain  
+ 
    ```
   
    Gain value can be set initially by reading datasheet and analysing the linear region operation of current measurement IC.
  By default, this value is set to **1**. 
    
-   Sensor can be connected in [PULL_UP or PULL_DOWN](https://electronics.stackexchange.com/questions/210643/pull-up-pull-down-resistor-confusion) manner. By default, configuration is set as [**PULL_DOWN**](https://electronics.stackexchange.com/questions/210643/pull-up-pull-down-resistor-confusion)
-.
+  Maxim (MAX4080) Current Sensor (OUT pin) can be connected to any analog pin on arduino board.
+
+![max4080_connection](https://user-images.githubusercontent.com/25079922/48984902-00c5ed00-f102-11e8-85f7-d4d0b495e62a.png)
   
- or
- 
- `Current_Sensor cs(Analog_pin, Offset_Voltage)`
- 
+  
  or
  
  Simply,
