@@ -55,7 +55,6 @@ class Current_Sensor
   public:
     Current_Sensor(int pin);	/**< constructor */
 	Current_Sensor(int pin,float gain);	/**< constructor */
-	Current_Sensor(int pin, float offset, sensor_connection_types_t configuration);	/**< constructor */	
     float calculate_Current();
     float fmap(float x, float in_min, float in_max, float out_min, float out_max);
 
