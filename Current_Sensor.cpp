@@ -49,7 +49,7 @@ Current_Sensor::Current_Sensor(int pin)
 ** Descriptions:            set pin, pin mode and gain 
 ****************************************************************************/
 
-Voltage_Sensor::Voltage_Sensor(int pin, float gain)
+Current_Sensor::Current_Sensor(int pin, float gain)
 {
   pinMode(pin, INPUT);
   _pin = pin;
@@ -57,18 +57,6 @@ Voltage_Sensor::Voltage_Sensor(int pin, float gain)
   _config = PULL_DOWN;
 }
 
-/******************************************************************************
-** Function name:           Current_Sensor
-** Descriptions:            set pin, pin mode, gain, sensor connection 
-*******************************************************************************/
-
-Voltage_Sensor::Voltage_Sensor(int pin, float gain, sensor_connection_types_t configuration)
-{
-  pinMode(pin, INPUT);
-  _pin = pin;
-  _gain = gain;
-  _config = configuration;
-}
 
 /***************************************************************************
  PUBLIC FUNCTIONS
