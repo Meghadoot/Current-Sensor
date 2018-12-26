@@ -53,7 +53,7 @@ To use this library download the zip file or clone the repository, decompress it
  `Current_Sensor cs(Analog_pin)`
  
 * Read the exact Current value in Amps.
- `float current = cs.calculateVolts()`
+ `float current = cs.calculate_Current()`
 
 ## Contributing
 
